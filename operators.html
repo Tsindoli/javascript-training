@@ -3,16 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operators</title>
+    <title>Conditional statements</title>
 </head>
 <body>
     <script>
-        //%modulus
-        let a = 5;
-        let b = 2;
-        let modulus = a%10;
-        let increment = a**b;
-        console.log(exponential);
+    //*
+    let age = 13;
+     
+    if (age >= 18){
+        console.log("You are old enough to enter this site");
+    }
+    else{
+        console.log("You must be 18+ to enter this site");
+    }//*
+
+    let time = 14;
+
+    if (time < 12) {
+        console.log("Good morning!");
+        }
+        else {
+            console.log("Good afternoon!")
+        }
+        //*
+
+        let isStudent = true;
+
+        if(isStudent){
+            console.log("You are a student!");
+            }
+        else{
+            console.log("You are NOT a student!")
+        }
+        //*
+        let age = 25;
+        let hasLicense = false;
+
+        if (age >= 16){
+            console.log("You are old enough to drive");
+
+            if (hasLicense){
+                console.log("You have your license!");
+            }
+            else{
+                console.log("You do not have your license yet!");
+            }
+        }
+        else{
+            console.log("You must be 16+ to have a license");
+        }
     </script>
 </body>
 </html
