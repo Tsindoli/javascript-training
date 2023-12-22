@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="countries.js"></script>
+
+    <script>
+        let pops = {
+            '0 - 50m': 0,
+            '50m - 100m': 0,
+            '>100m': 0
+        }
+
+        for (let m = 0;
+            m < countries_population.length; m++) {
+            let population = countries_population[m].population
+
+            if (population >= 0 && population < 50000000) {
+                pops['0-50m']++
+            }
+            else {
+                pops['>100m']++
+            }
+
+        }
+        console.log(pops)
+    </script>
+</body>
+
+</html>
