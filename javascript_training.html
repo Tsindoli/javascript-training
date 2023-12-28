@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays</title>
+    <title>Add JavaScript Code inside Head Section</title>
+
+    <script>
+        function myFun() {
+            document.getElementById("demo").innerHTML = "Content changed!";
+        }
+
+    </script>
 </head>
 
 <body>
-    <script>
-        let color_array = ["red, green, blue"];
-        console.log(color_array);
-
-        
-    </script>
+    <h2>
+        Add JavaScript Code inside Head Section.
+    </h2>
+    <h3 id="demo" style="color:green;">
+        Tsindoli is my name.
+    </h3>
+    <button type="button" onclick="myFun()">
+        Click Here
+    </button>
 </body>
 
 </html>
