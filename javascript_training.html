@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add JavaScript Code inside Head Section</title>
-
-    <script>
-        function myFun() {
-            document.getElementById("demo").innerHTML = "Content changed!";
-        }
-
-    </script>
+    <title>Add JavaScript Code inside Body Section</title>
 </head>
 
 <body>
     <h2>
-        Add JavaScript Code inside Head Section.
+        Add JavaScript Code inside Body Section.
     </h2>
-    <h3 id="demo" style="color:green;">
+    <h3 id="demo" style="color:greenyellow;">
         Tsindoli is my name.
     </h3>
     <button type="button" onclick="myFun()">
         Click Here
     </button>
+
+    <script>
+        function myFun() {
+            document.getElementById("demo").innerHTML = "Content changed!";
+
+        }
+
+    </script>
 </body>
 
 </html>
