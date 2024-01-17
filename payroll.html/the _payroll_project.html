@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Payroll Project</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Payroll</title>
+        <link rel="icon" type="image/x-icon" href="logo.jpeg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+            integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon"
+            href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2015-01-14/00891c535c8a50e09c26392a56940846.ico">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="aserts/logo.jpeg" alt="">
+            </div>
+            <h1>NET PAY CALCULATOR <br><span>Enter basic salary and benefits</span></h1>
+
+            <hr>
+            <form id="anchor" action="">
+                <label class="lab" for="gross-salary">Basic Salary:</label>
+                <input id="basic_salary" style="height: 50px;font-size: 15px; width: 100px;" class="btn" type="number"
+                    placeholder="ksh" id="basic_salary" name="Basic Salary">
+                <label class="lab" for="payee-rate">Benefit:</label>
+                <input itemid="benefit" style="height: 50px; font-size: 15px; width: 100px;; " type="number"
+                    placeholder="ksh" id="benefit" name="Benefit">
+                <button id="Calculate"
+                    style="height: 50px ;cursor: pointer;width: 120px ;font-size: 20px; background-color: orange, 197, 11); color:red; font-weight: bolder;"
+                    type="submit" onclick="linkAllCalculations()">
+                    Calculate</button>
+            </form>
+            <p style="color: red;" id="error"></p>
+            <p style="color: green; position: absolute;" id="succes"></p>
+            <table id="table" border="1">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="">
+                        <td>Gross salary</td id="gross">
+                        <td id="gross"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>NSSF</td>
+                        <td id="nssf"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>NHDF</td>
+                        <td id="nhdf"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>TAXABLE INCOME</td>
+                        <td id="taxable_income"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>NHIF</td>
+                        <td id="nhif"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>PAYEE</td>
+                        <td id="payee"></td>
+                    </tr><br><br>
+                    <tr id="">
+                        <td>NET PAY</td>
+                        <td id="net_pay"></td>
+                    </tr>
+                    </form>
+                </tbody>
+            </table>
+            <div class="icon">
+                <a href="https://twitter.com/RopyKevin6" target="_blank"><i
+                        class="fa-brands fa-twitter fa-shake fa-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-ropy-154238128/" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-bounce fa-2xl"></i></a>
+                <a href="https://github.com/Ropykevin" target="_blank"> <i
+                        class="fa-brands fa-github fa-bounce fa-2xl"></i></a>
+                <a href="https://www.instagram.com/ropykevin/" target="_blank"><i
+                        class="fa-brands fa-instagram fa-beat-fade fa-2xl"></i></a>
+            </div>
+
+        </div>
+        <div id="total_nssf_nhdf">
+            </td>
+            <div id="taxable_income">
+                </td>
+
+                </tr><br><br></div>
+            <script>
+                document.getElementById("Calculate").addEventListener("click",
+                    function (Event) {
+                        event.preventDefault()
+                    });
+                function calculate_gross(basic_salary, benefits) {
+                    grossSalary = basic_salary + benefits
+                    return grossSalary
+                }
+                function link_gross() {
+                    document.getElementById("gross").innerText = calculate_gross(
+                        Number(document.getElementById("basic_salary").value),
+                        Number(document.getElementById("benefit").value)
+                    )
+                }
+                function check_input() {
+                    if (
+                        document.getElementById("basic_salary").value.length < 0 &&
+                        document.getElementById("benefits").value.length < 0
+                    ) {
+                        document.getElementById("error").innerText =
+                            "Ensure all fields are entered";
+                    } else {
+                        document.getElementById("succes").innerText = "View the net salary below";
+                    }
+                }
+            </script>
+            <script src="script.js"></script>
+    </body>
+    <footer>
+
+    </footer>
+
+    </html>
+</body>
+
+</html>

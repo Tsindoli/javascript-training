@@ -4,19 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age</title>
+    <title>CSS Box Model</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            background-color: pink;
+            padding: 5px;
+            border: 20px solid red;
+            margin: 40px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .box2 {
+            background-color: yellowgreen;
+            border: 0 solid blueviolet
+        }
+    </style>
 </head>
 
 <body>
-    <h2>How Old Are You?</h2>
-    <p></p>
-
-    <input type="radio" id="child" name="age" value="child">
-    <label for="child">17 years or younger</label><br>
-    <input type="radio" id="adult" name="age" value="adult">
-    <label for="adult">18 - 64 years</label><br>
-    <input type="radio" id="senior" name="age" value="senior">
-    <label for="senior">65 years or older</label>
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
 
 </body>
 
